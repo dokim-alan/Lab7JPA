@@ -30,13 +30,15 @@ public class UserService {
     
     public boolean delete(String email) throws Exception {
         //case 1, soft delete
+        /*
         User user = new User();
         user.setEmail(email);
+        */
 
         
-        /* case 2, hard delete from the user list 'delete'
+        /* case 2, hard delete from the user list 'delete' */
         User user = this.get(email);
-        */ 
+        
         return this.userDB.delete(user);
     }
 }
